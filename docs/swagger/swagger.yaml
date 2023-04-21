@@ -1,0 +1,33 @@
+|-
+  {
+    "openapi": "3.0.0",
+    "paths": {
+      "/health": {
+        "get": {
+          "operationId": "HealthController_getHealth",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          }
+        }
+      }
+    },
+    "info": {
+      "title": "Nest.js Template",
+      "description": "Nest.js API Template",
+      "version": "1.0",
+      "contact": {}
+    },
+    "tags": [
+      {
+        "name": "Nest.js",
+        "description": ""
+      }
+    ],
+    "servers": [],
+    "components": {
+      "schemas": {}
+    }
+  }
