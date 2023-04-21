@@ -17,5 +17,5 @@ jobs:
         with:
           token: ${{ secrets.GHP_TOKEN }}
           branch: gh-pages
-          folder: services/apis/public
+          folder: public
           clean: true
