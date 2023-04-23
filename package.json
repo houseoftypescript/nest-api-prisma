@@ -8,9 +8,9 @@
   "license": "GNU GPL 3.0",
   "private": true,
   "engines": {
-    "node": ">= 16",
-    "npm": ">= 8",
-    "yarn": ">= 1"
+    "node": "20.0.0",
+    "npm": "9.6.4",
+    "yarn": "1.22.19"
   },
   "scripts": {
     "build": "nest build",
