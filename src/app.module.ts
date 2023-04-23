@@ -1,10 +1,13 @@
 import { Module } from '@nestjs/common';
-import { HealthController } from './modules/health/health.controller';
-import { HealthService } from './modules/health/health.service';
+import { DevtoolsModule } from '@nestjs/devtools-integration';
+import { HealthModule } from './modules/health/health.module';
 
 @Module({
-  imports: [],
-  controllers: [HealthController],
-  providers: [HealthService],
+  imports: [
+    DevtoolsModule.register({
+      http: process.env.NODE_ENV !== 'production',
+    }),
+    HealthModule,
+  ],
 })
 export class AppModule {}

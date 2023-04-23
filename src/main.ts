@@ -17,13 +17,15 @@ const swaggerify = (app: INestApplication) => {
   const swaggerPath = './docs/swagger';
   const json = JSON.stringify(document, null, 2);
   writeFileSync(`${swaggerPath}/swagger.json`, json);
-  const yaml: string = dump(json);
+  const yaml: string = dump(document);
   writeFileSync(`${swaggerPath}/swagger.yaml`, yaml);
   return document;
 };
 
 const bootstrap = async () => {
-  const app: INestApplication = await NestFactory.create(AppModule);
+  const app: INestApplication = await NestFactory.create(AppModule, {
+    snapshot: environments.environment !== 'production',
+  });
   if (environments.environment === 'development') swaggerify(app);
   await app.listen(environments.port);
 };
