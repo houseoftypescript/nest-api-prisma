@@ -2,6 +2,7 @@ import { INestApplication } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { writeFileSync } from 'fs';
+import helmet from 'helmet';
 import { dump } from 'js-yaml';
 import { AppModule } from './app.module';
 import environments from './common/environments/environments';
@@ -22,10 +23,12 @@ const swaggerify = (app: INestApplication) => {
   return document;
 };
 
+const isProd = environments.environment !== 'production';
+
 const bootstrap = async () => {
-  const app: INestApplication = await NestFactory.create(AppModule, {
-    snapshot: environments.environment !== 'production',
-  });
+  const app: INestApplication = await NestFactory.create(AppModule);
+  app.enableCors();
+  app.use(helmet());
   if (environments.environment === 'development') swaggerify(app);
   await app.listen(environments.port);
 };
