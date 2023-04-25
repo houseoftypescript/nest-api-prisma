@@ -5,7 +5,7 @@
       "description": "",
       "item": [
         {
-          "id": "e729b84e-f842-4994-a3a9-821f155c949d",
+          "id": "9e3b57df-de7b-4b39-8d38-0d989dacb5ff",
           "name": "Health Controller get Health",
           "request": {
             "name": "Health Controller get Health",
@@ -22,7 +22,7 @@
           },
           "response": [
             {
-              "id": "e4ec2dba-d875-44ac-80f1-bafeb59e7c04",
+              "id": "c52e9402-c806-424a-b8f7-30b732a56443",
               "originalRequest": {
                 "url": {
                   "path": ["health"],
@@ -49,9 +49,12 @@
   "event": [],
   "variable": [{ "key": "baseUrl", "value": "/" }],
   "info": {
-    "_postman_id": "d82c2c6b-6dde-424f-9c7e-3134b8fed5bb",
-    "name": "Nest.js Template",
+    "_postman_id": "245a03a7-4eba-42a0-9dac-e39a593799d8",
+    "name": "Nest.js - API - Template",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": { "content": "Nest.js API Template", "type": "text/plain" }
+    "description": {
+      "content": "Nest.js - API - Template",
+      "type": "text/plain"
+    }
   }
 }

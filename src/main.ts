@@ -9,8 +9,8 @@ import environments from './common/environments/environments';
 
 const swaggerify = (app: INestApplication) => {
   const config = new DocumentBuilder()
-    .setTitle('Nest.js Template')
-    .setDescription('Nest.js API Template')
+    .setTitle('Nest.js - API - Template')
+    .setDescription('Nest.js - API - Template')
     .setVersion('1.0')
     .addTag('Nest.js')
     .build();
@@ -22,8 +22,6 @@ const swaggerify = (app: INestApplication) => {
   writeFileSync(`${swaggerPath}/swagger.yaml`, yaml);
   return document;
 };
-
-const isProd = environments.environment !== 'production';
 
 const bootstrap = async () => {
   const app: INestApplication = await NestFactory.create(AppModule);
