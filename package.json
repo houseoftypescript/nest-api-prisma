@@ -1,9 +1,9 @@
 {
   "name": "@nest-template/apis",
   "version": "0.0.1",
-  "description": "Nest.js APIs",
+  "description": "Nest.js - API - Template",
   "main": "dist/main",
-  "repository": "git@github.com:hieudoanm/nest-template.git",
+  "repository": "git@github.com:hieudoanm/nest-api-template.git",
   "author": "hieudoanm <hieumdoan@gmail.com>",
   "license": "GNU GPL 3.0",
   "private": true,
