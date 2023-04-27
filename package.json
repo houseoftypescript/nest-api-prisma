@@ -13,6 +13,7 @@
     "yarn": "1.22.19"
   },
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "nest build",
     "postbuild": "yarn docs:postman && yarn docs:html",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -21,7 +22,7 @@
     "start:debug": "kill-port 3000 && nest start --debug --watch",
     "start:prod": "node dist/main",
     "docs:postman": "openapi2postmanv2 -s docs/swagger/swagger.yaml -o docs/postman/collection.json",
-    "docs:html": "redoc-cli build ./docs/swagger/swagger.json --output ./public/index.html --title 'Nest.js APIs'",
+    "docs:html": "redocly build-docs ./docs/swagger/swagger.json --output ./public/index.html --title 'Nest.js - API - Template'",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -46,6 +47,7 @@
     "@nestjs/cli": "9.4.2",
     "@nestjs/schematics": "9.1.0",
     "@nestjs/testing": "9.4.0",
+    "@redocly/cli": "1.0.0-beta.125",
     "@types/express": "4.17.17",
     "@types/jest": "29.5.1",
     "@types/node": "18.16.1",
@@ -62,7 +64,7 @@
     "prettier": "2.8.8",
     "pretty-quick": "3.1.3",
     "prisma": "4.13.0",
-    "redoc-cli": "0.13.21",
+    "rimraf": "5.0.0",
     "source-map-support": "0.5.21",
     "supertest": "6.3.3",
     "ts-jest": "29.1.0",
