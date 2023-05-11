@@ -7,7 +7,7 @@ volumes:
 services:
   postgres-nest:
     restart: unless-stopped
-    image: postgres:15.2
+    image: postgres:15.3
     container_name: postgres-nest
     volumes:
       - postgres_nest:/var/lib/postgresql/data
