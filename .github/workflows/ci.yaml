@@ -10,7 +10,7 @@ on:
 
 jobs:
   ci:
-    name: CI - ${{ matrix.project.name }}
+    name: CI
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,9 +21,9 @@ jobs:
           node-version: '20.1.0'
       - name: Install Dependencies
         run: yarn install --network-timeout 86400000
-      - name: Test - Unit
-        run: yarn test
-      - name: Test - End-To-End
-        run: yarn test:e2e
       - name: Build Production
         run: yarn build
+      - name: Test - Unit
+        run: yarn test
+      - name: Test - e2e
+        run: yarn test:e2e
