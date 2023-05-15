@@ -11,13 +11,13 @@ export class AuthController {
 
   @Post('sign-up')
   @ApiResponse({ type: TokenResponseDto })
-  async signUp(@Body() { username, password }: TokenRequestDto): Promise<TokenResponseDto> {
-    return this.authService.signUp({ username, password });
+  async signUp(@Body() { email, username, password }: TokenRequestDto): Promise<TokenResponseDto> {
+    return this.authService.signUp({ email, username, password });
   }
 
   @Post('sign-in')
   @ApiResponse({ type: TokenResponseDto })
-  async signIn(@Body() { username, password }: TokenRequestDto): Promise<TokenResponseDto> {
-    return this.authService.signIn({ username, password });
+  async signIn(@Body() { email, username, password }: TokenRequestDto): Promise<TokenResponseDto> {
+    return this.authService.signIn({ email, username, password });
   }
 }

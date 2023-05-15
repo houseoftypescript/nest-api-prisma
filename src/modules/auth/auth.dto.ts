@@ -7,6 +7,9 @@ export class TokenResponseDto {
 
 export class TokenRequestDto {
   @ApiProperty()
+  email: string;
+
+  @ApiProperty()
   username: string;
 
   @ApiProperty()

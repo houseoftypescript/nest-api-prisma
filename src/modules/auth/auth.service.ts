@@ -12,8 +12,8 @@ import { TokenRequestDto, TokenResponseDto } from './auth.dto';
 export class AuthService {
   constructor(private readonly jwtService: JwtService, private readonly prismaService: PrismaService) {}
 
-  async signIn({ username = '', password = '' }: TokenRequestDto): Promise<TokenResponseDto> {
-    const user: User = await this.prismaService.user.findFirstOrThrow({ where: { username } });
+  async signIn({ email = '', username = '', password = '' }: TokenRequestDto): Promise<TokenResponseDto> {
+    const user: User = await this.prismaService.user.findFirstOrThrow({ where: { OR: [{ email, username }] } });
     const { id: user_id, password: hash } = user;
     const isMatch = await bcrypt.compare(password, hash);
     if (!isMatch) throw new Error('Login Error');
@@ -22,12 +22,12 @@ export class AuthService {
     return { token };
   }
 
-  async signUp({ username, password }: UserRequestDto): Promise<TokenResponseDto> {
+  async signUp({ email, username, password }: UserRequestDto): Promise<TokenResponseDto> {
     const id: string = v4();
     const hash: string = await bcrypt.hash(password, environments.saltOrRounds);
     const user: UserResponseDto = await this.prismaService.user.create({
-      data: { id, username, password: hash },
-      select: { id: true, username: true },
+      data: { id, email, username, password: hash },
+      select: { id: true, email: true, username: true },
     });
     const { id: userId } = user;
     const listId: string = v4();

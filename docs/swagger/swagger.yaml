@@ -194,6 +194,24 @@ paths:
         '204':
           description: ''
       tags: *ref_3
+  /user/email:
+    patch:
+      operationId: UsersController_updateEmail
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRequestDto'
+      responses:
+        default:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponseDto'
+      tags: *ref_3
   /user/username:
     patch:
       operationId: UsersController_updateUsername
@@ -242,11 +260,14 @@ components:
     TokenRequestDto:
       type: object
       properties:
+        email:
+          type: string
         username:
           type: string
         password:
           type: string
       required:
+        - email
         - username
         - password
     TokenResponseDto:
@@ -310,18 +331,24 @@ components:
       properties:
         id:
           type: string
+        email:
+          type: string
         username:
           type: string
       required:
         - id
+        - email
         - username
     UserRequestDto:
       type: object
       properties:
+        email:
+          type: string
         username:
           type: string
         password:
           type: string
       required:
+        - email
         - username
         - password

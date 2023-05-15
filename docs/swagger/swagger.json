@@ -297,6 +297,35 @@
         "tags": ["User"]
       }
     },
+    "/user/email": {
+      "patch": {
+        "operationId": "UsersController_updateEmail",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["User"]
+      }
+    },
     "/user/username": {
       "patch": {
         "operationId": "UsersController_updateUsername",
@@ -369,6 +398,9 @@
       "TokenRequestDto": {
         "type": "object",
         "properties": {
+          "email": {
+            "type": "string"
+          },
           "username": {
             "type": "string"
           },
@@ -376,7 +408,7 @@
             "type": "string"
           }
         },
-        "required": ["username", "password"]
+        "required": ["email", "username", "password"]
       },
       "TokenResponseDto": {
         "type": "object",
@@ -450,15 +482,21 @@
           "id": {
             "type": "string"
           },
+          "email": {
+            "type": "string"
+          },
           "username": {
             "type": "string"
           }
         },
-        "required": ["id", "username"]
+        "required": ["id", "email", "username"]
       },
       "UserRequestDto": {
         "type": "object",
         "properties": {
+          "email": {
+            "type": "string"
+          },
           "username": {
             "type": "string"
           },
@@ -466,7 +504,7 @@
             "type": "string"
           }
         },
-        "required": ["username", "password"]
+        "required": ["email", "username", "password"]
       }
     }
   }

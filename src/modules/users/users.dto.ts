@@ -5,10 +5,16 @@ export class UserResponseDto {
   id: string;
 
   @ApiProperty()
+  email: string;
+
+  @ApiProperty()
   username: string;
 }
 
 export class UserRequestDto {
+  @ApiProperty()
+  email: string;
+
   @ApiProperty()
   username: string;
 
