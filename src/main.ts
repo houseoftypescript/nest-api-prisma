@@ -12,7 +12,6 @@ const swaggerify = (app: INestApplication) => {
     .setTitle('Nest.js - API - Template')
     .setDescription('Nest.js - API - Template')
     .setVersion('1.0')
-    .addTag('Nest.js')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   const swaggerPath = './docs/swagger';

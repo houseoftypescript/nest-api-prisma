@@ -1,11 +1,13 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, UseGuards } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { Task } from '@prisma/client';
 import { TaskResponseDto } from './tasks.dto';
 import { TaskRequest, TasksService } from './tasks.service';
+import { LocalAuthGuard } from 'src/common/guards/local.guard';
 
 @ApiTags('Tasks')
 @Controller('tasks')
+@UseGuards(LocalAuthGuard)
 export class TasksController {
   constructor(private readonly tasksService: TasksService) {}
 

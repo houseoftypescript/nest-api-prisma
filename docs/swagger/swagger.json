@@ -1,6 +1,64 @@
 {
   "openapi": "3.0.0",
   "paths": {
+    "/auth/sign-up": {
+      "post": {
+        "operationId": "AuthController_signUp",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TokenRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["Auth"]
+      }
+    },
+    "/auth/sign-in": {
+      "post": {
+        "operationId": "AuthController_signIn",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TokenRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "default": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenResponseDto"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["Auth"]
+      }
+    },
     "/health": {
       "get": {
         "operationId": "HealthController_getHealth",
@@ -210,64 +268,6 @@
         "tags": ["Tasks"]
       }
     },
-    "/user/sign-up": {
-      "post": {
-        "operationId": "UsersController_signUp",
-        "parameters": [],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserRequestDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserResponseDto"
-                }
-              }
-            }
-          }
-        },
-        "tags": ["User"]
-      }
-    },
-    "/user/sign-in": {
-      "post": {
-        "operationId": "UsersController_signIn",
-        "parameters": [],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserRequestDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "default": {
-            "description": "",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TokenResponseDto"
-                }
-              }
-            }
-          }
-        },
-        "tags": ["User"]
-      }
-    },
     "/user": {
       "get": {
         "operationId": "UsersController_getUser",
@@ -362,15 +362,31 @@
     "version": "1.0",
     "contact": {}
   },
-  "tags": [
-    {
-      "name": "Nest.js",
-      "description": ""
-    }
-  ],
+  "tags": [],
   "servers": [],
   "components": {
     "schemas": {
+      "TokenRequestDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "required": ["username", "password"]
+      },
+      "TokenResponseDto": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          }
+        },
+        "required": ["token"]
+      },
       "HealthResponseDto": {
         "type": "object",
         "properties": {
@@ -428,18 +444,6 @@
         },
         "required": ["id", "title", "description", "completed", "listId"]
       },
-      "UserRequestDto": {
-        "type": "object",
-        "properties": {
-          "username": {
-            "type": "string"
-          },
-          "password": {
-            "type": "string"
-          }
-        },
-        "required": ["username", "password"]
-      },
       "UserResponseDto": {
         "type": "object",
         "properties": {
@@ -452,14 +456,17 @@
         },
         "required": ["id", "username"]
       },
-      "TokenResponseDto": {
+      "UserRequestDto": {
         "type": "object",
         "properties": {
-          "token": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
             "type": "string"
           }
         },
-        "required": ["token"]
+        "required": ["username", "password"]
       }
     }
   }

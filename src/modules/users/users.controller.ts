@@ -1,26 +1,16 @@
-import { Body, Controller, Delete, Get, Injectable, Patch, Post, Request } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Injectable, Patch, Post, Request, UseGuards } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { User } from '@prisma/client';
-import { TokenResponseDto, UserRequestDto, UserResponseDto } from './users.dto';
+import { UserRequestDto, UserResponseDto } from './users.dto';
 import { UsersService } from './users.service';
+import { LocalAuthGuard } from 'src/common/guards/local.guard';
 
 @Injectable()
 @ApiTags('User')
 @Controller('user')
+@UseGuards(LocalAuthGuard)
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
-
-  @Post('sign-up')
-  @ApiResponse({ type: UserResponseDto })
-  async signUp(@Body() { username, password }: UserRequestDto): Promise<UserResponseDto> {
-    return this.usersService.signUp({ username, password });
-  }
-
-  @Post('sign-in')
-  @ApiResponse({ type: TokenResponseDto })
-  async signIn(@Body() { username, password }: UserRequestDto): Promise<TokenResponseDto> {
-    return this.usersService.signIn({ username, password });
-  }
 
   @Get()
   @ApiResponse({ type: UserResponseDto })

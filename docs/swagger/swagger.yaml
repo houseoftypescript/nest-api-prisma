@@ -1,5 +1,42 @@
 openapi: 3.0.0
 paths:
+  /auth/sign-up:
+    post:
+      operationId: AuthController_signUp
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenRequestDto'
+      responses:
+        default:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponseDto'
+      tags: &ref_0
+        - Auth
+  /auth/sign-in:
+    post:
+      operationId: AuthController_signIn
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenRequestDto'
+      responses:
+        default:
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponseDto'
+      tags: *ref_0
   /health:
     get:
       operationId: HealthController_getHealth
@@ -26,7 +63,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ListResponseDto'
-      tags: &ref_0
+      tags: &ref_1
         - Lists
     post:
       operationId: ListsController_createList
@@ -44,7 +81,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListResponseDto'
-      tags: *ref_0
+      tags: *ref_1
   /lists/{id}:
     get:
       operationId: ListsController_getList
@@ -56,7 +93,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListResponseDto'
-      tags: *ref_0
+      tags: *ref_1
     patch:
       operationId: ListsController_updateList
       parameters: []
@@ -73,14 +110,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ListResponseDto'
-      tags: *ref_0
+      tags: *ref_1
     delete:
       operationId: ListsController_deleteList
       parameters: []
       responses:
         '204':
           description: ''
-      tags: *ref_0
+      tags: *ref_1
   /tasks:
     get:
       operationId: TasksController_getTasks
@@ -94,7 +131,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TaskResponseDto'
-      tags: &ref_1
+      tags: &ref_2
         - Tasks
     post:
       operationId: TasksController_createTask
@@ -106,7 +143,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TaskResponseDto'
-      tags: *ref_1
+      tags: *ref_2
   /tasks/{id}:
     get:
       operationId: TasksController_getTask
@@ -118,7 +155,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TaskResponseDto'
-      tags: *ref_1
+      tags: *ref_2
     patch:
       operationId: TasksController_updateTask
       parameters: []
@@ -129,50 +166,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/TaskResponseDto'
-      tags: *ref_1
+      tags: *ref_2
     delete:
       operationId: TasksController_deleteTask
       parameters: []
       responses:
         '204':
           description: ''
-      tags: *ref_1
-  /user/sign-up:
-    post:
-      operationId: UsersController_signUp
-      parameters: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/UserRequestDto'
-      responses:
-        default:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/UserResponseDto'
-      tags: &ref_2
-        - User
-  /user/sign-in:
-    post:
-      operationId: UsersController_signIn
-      parameters: []
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/UserRequestDto'
-      responses:
-        default:
-          description: ''
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TokenResponseDto'
       tags: *ref_2
   /user:
     get:
@@ -185,14 +185,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/UserResponseDto'
-      tags: *ref_2
+      tags: &ref_3
+        - User
     delete:
       operationId: UsersController_deleteUser
       parameters: []
       responses:
         '204':
           description: ''
-      tags: *ref_2
+      tags: *ref_3
   /user/username:
     patch:
       operationId: UsersController_updateUsername
@@ -210,7 +211,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/UserResponseDto'
-      tags: *ref_2
+      tags: *ref_3
   /user/password:
     patch:
       operationId: UsersController_updatePassword
@@ -228,18 +229,33 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/UserResponseDto'
-      tags: *ref_2
+      tags: *ref_3
 info:
   title: Nest.js - API - Template
   description: Nest.js - API - Template
   version: '1.0'
   contact: {}
-tags:
-  - name: Nest.js
-    description: ''
+tags: []
 servers: []
 components:
   schemas:
+    TokenRequestDto:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+      required:
+        - username
+        - password
+    TokenResponseDto:
+      type: object
+      properties:
+        token:
+          type: string
+      required:
+        - token
     HealthResponseDto:
       type: object
       properties:
@@ -289,16 +305,6 @@ components:
         - description
         - completed
         - listId
-    UserRequestDto:
-      type: object
-      properties:
-        username:
-          type: string
-        password:
-          type: string
-      required:
-        - username
-        - password
     UserResponseDto:
       type: object
       properties:
@@ -309,10 +315,13 @@ components:
       required:
         - id
         - username
-    TokenResponseDto:
+    UserRequestDto:
       type: object
       properties:
-        token:
+        username:
+          type: string
+        password:
           type: string
       required:
-        - token
+        - username
+        - password
