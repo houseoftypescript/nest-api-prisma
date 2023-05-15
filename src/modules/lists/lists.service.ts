@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { List } from '@prisma/client';
-import { PrismaService } from 'src/common/prisma/prisma.service';
 import { v4 } from 'uuid';
+import { PrismaService } from '../../common/prisma/prisma.service';
 
 export type ListRequest = {
   title: string;

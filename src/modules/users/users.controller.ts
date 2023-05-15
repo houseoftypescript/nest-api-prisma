@@ -1,7 +1,7 @@
 import { Body, Controller, Delete, Get, Injectable, Patch, Request, UseGuards } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { User } from '@prisma/client';
-import { LocalAuthGuard } from 'src/common/guards/local.guard';
+import { LocalAuthGuard } from '../../common/guards/local.guard';
 import { UserRequestDto, UserResponseDto } from './users.dto';
 import { UsersService } from './users.service';
 

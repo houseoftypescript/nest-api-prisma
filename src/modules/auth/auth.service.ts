@@ -2,9 +2,9 @@ import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { User } from '@prisma/client';
 import bcrypt from 'bcrypt';
-import environments from 'src/common/environments/environments';
-import { PrismaService } from 'src/common/prisma/prisma.service';
 import { v4 } from 'uuid';
+import environments from '../../common/environments/environments';
+import { PrismaService } from '../../common/prisma/prisma.service';
 import { UserRequestDto, UserResponseDto } from '../users/users.dto';
 import { TokenRequestDto, TokenResponseDto } from './auth.dto';
 
