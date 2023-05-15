@@ -13,7 +13,7 @@
     "yarn": "1.22.19"
   },
   "scripts": {
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist && prisma generate",
     "build": "nest build",
     "postbuild": "yarn docs:postman && yarn docs:html",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
