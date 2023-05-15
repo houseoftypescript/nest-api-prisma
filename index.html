@@ -1874,11 +1874,6 @@
           </div>
           <div class="sc-ikJyIC eqZXtE scrollbar-container undefined">
             <ul class="sc-uojGG cBjpjq" role="menu">
-              <li data-item-id="tag/Nest.js" class="sc-bilyIR iVJVQY">
-                <label type="tag" role="menuitem" class="sc-eGPXGI cbGskd -depth1"
-                  ><span title="Nest.js" class="sc-hAcGzb hTIqli">Nest.js</span></label
-                >
-              </li>
               <li data-item-id="tag/Auth" class="sc-bilyIR iVJVQY">
                 <label type="tag" role="menuitem" class="sc-eGPXGI cbGskd -depth1"
                   ><span title="Auth" class="sc-hAcGzb hTIqli">Auth</span
@@ -2052,6 +2047,14 @@
                       ><span width="calc(100% - 38px)" class="sc-hAcGzb gPtqKT">UsersController_deleteUser</span></label
                     >
                   </li>
+                  <li data-item-id="tag/User/operation/UsersController_updateEmail" class="sc-bilyIR iVJVQY">
+                    <label role="menuitem" class="sc-eGPXGI jDuioL -depth2"
+                      ><span type="patch" class="sc-ilfuhL eXEyiA operation-type patch">patch</span
+                      ><span width="calc(100% - 38px)" class="sc-hAcGzb gPtqKT"
+                        >UsersController_updateEmail</span
+                      ></label
+                    >
+                  </li>
                   <li data-item-id="tag/User/operation/UsersController_updateUsername" class="sc-bilyIR iVJVQY">
                     <label role="menuitem" class="sc-eGPXGI jDuioL -depth2"
                       ><span type="patch" class="sc-ilfuhL eXEyiA operation-type patch">patch</span
@@ -2162,15 +2165,6 @@
               </div>
             </div>
           </div>
-          <div id="tag/Nest.js" data-section-id="tag/Nest.js" class="sc-eCImPb kKqedw">
-            <div class="sc-iCfMLu jTXZbd">
-              <div class="sc-hKwDye fcjMZs">
-                <h1 class="sc-furwcr kwcwWd">
-                  <a class="sc-crHmcD bNUQy" href="#tag/Nest.js" aria-label="tag/Nest.js"></a>Nest.js
-                </h1>
-              </div>
-            </div>
-          </div>
           <div id="tag/Auth" data-section-id="tag/Auth" class="sc-eCImPb kKqedw">
             <div class="sc-iCfMLu jTXZbd">
               <div class="sc-hKwDye fcjMZs">
@@ -2205,6 +2199,21 @@
                 <div class="sc-iJKOTD sc-cidDSM hGZPxu fYaHea"></div>
                 <table class="sc-hGPBjI wbnF">
                   <tbody>
+                    <tr class="">
+                      <td class="sc-hBUSln sc-fFeiMQ kCCtqV fwnkRw" kind="field" title="email">
+                        <span class="sc-ieecCq fMdASL"></span><span class="property-name">email</span>
+                        <div class="sc-nVkyK sc-hiwPVj eyZzuM eSyGZd">required</div>
+                      </td>
+                      <td class="sc-bkkeKt fOwWgB">
+                        <div>
+                          <div>
+                            <span class="sc-lbhJGD sc-iNGGcK gHbDui eLMLxg"></span
+                            ><span class="sc-lbhJGD sc-jeraig gHbDui ifsMbX">string</span>
+                          </div>
+                          <div><div class="sc-iJKOTD sc-cidDSM hGZPxu fhPxtY"></div></div>
+                        </div>
+                      </td>
+                    </tr>
                     <tr class="">
                       <td class="sc-hBUSln sc-fFeiMQ kCCtqV fwnkRw" kind="field" title="username">
                         <span class="sc-ieecCq fMdASL"></span><span class="property-name">username</span>
@@ -2324,6 +2333,13 @@
                                   <ul class="obj collapsible">
                                     <li>
                                       <div class="hoverable">
+                                        <span class="property token string">"email"</span>:
+                                        <span class="token string">&quot;string&quot;</span
+                                        ><span class="token punctuation">,</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="hoverable">
                                         <span class="property token string">"username"</span>:
                                         <span class="token string">&quot;string&quot;</span
                                         ><span class="token punctuation">,</span>
@@ -2430,6 +2446,21 @@
                 <div class="sc-iJKOTD sc-cidDSM hGZPxu fYaHea"></div>
                 <table class="sc-hGPBjI wbnF">
                   <tbody>
+                    <tr class="">
+                      <td class="sc-hBUSln sc-fFeiMQ kCCtqV fwnkRw" kind="field" title="email">
+                        <span class="sc-ieecCq fMdASL"></span><span class="property-name">email</span>
+                        <div class="sc-nVkyK sc-hiwPVj eyZzuM eSyGZd">required</div>
+                      </td>
+                      <td class="sc-bkkeKt fOwWgB">
+                        <div>
+                          <div>
+                            <span class="sc-lbhJGD sc-iNGGcK gHbDui eLMLxg"></span
+                            ><span class="sc-lbhJGD sc-jeraig gHbDui ifsMbX">string</span>
+                          </div>
+                          <div><div class="sc-iJKOTD sc-cidDSM hGZPxu fhPxtY"></div></div>
+                        </div>
+                      </td>
+                    </tr>
                     <tr class="">
                       <td class="sc-hBUSln sc-fFeiMQ kCCtqV fwnkRw" kind="field" title="username">
                         <span class="sc-ieecCq fMdASL"></span><span class="property-name">username</span>
@@ -2547,6 +2578,13 @@
                                   ><button class="collapser" aria-label="collapse"></button
                                   ><span class="token punctuation">{</span><span class="ellipsis"></span>
                                   <ul class="obj collapsible">
+                                    <li>
+                                      <div class="hoverable">
+                                        <span class="property token string">"email"</span>:
+                                        <span class="token string">&quot;string&quot;</span
+                                        ><span class="token punctuation">,</span>
+                                      </div>
+                                    </li>
                                     <li>
                                       <div class="hoverable">
                                         <span class="property token string">"username"</span>:
@@ -4379,6 +4417,13 @@
                                     </li>
                                     <li>
                                       <div class="hoverable">
+                                        <span class="property token string">"email"</span>:
+                                        <span class="token string">&quot;string&quot;</span
+                                        ><span class="token punctuation">,</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="hoverable">
                                         <span class="property token string">"username"</span>:
                                         <span class="token string">&quot;string&quot;</span>
                                       </div>
@@ -4456,6 +4501,267 @@
             </div>
           </div>
           <div
+            id="tag/User/operation/UsersController_updateEmail"
+            data-section-id="tag/User/operation/UsersController_updateEmail"
+            class="sc-eCImPb hexvPn"
+          >
+            <div
+              data-section-id="operation/UsersController_updateEmail"
+              id="operation/UsersController_updateEmail"
+              class="sc-iCfMLu jTXZbd"
+            >
+              <div class="sc-hKwDye fcjMZs">
+                <h2 class="sc-pVTFL QwiBS">
+                  <a
+                    class="sc-crHmcD bNUQy"
+                    href="#tag/User/operation/UsersController_updateEmail"
+                    aria-label="tag/User/operation/UsersController_updateEmail"
+                  ></a
+                  >UsersController_updateEmail<!-- -->
+                </h2>
+                <h5 class="sc-iqseJM kyZwVG">
+                  Request Body schema: <span class="sc-cCcXHH hgRRjA">application/json</span>
+                </h5>
+                <div class="sc-iJKOTD sc-cidDSM hGZPxu fYaHea"></div>
+                <table class="sc-hGPBjI wbnF">
+                  <tbody>
+                    <tr class="">
+                      <td class="sc-hBUSln sc-fFeiMQ kCCtqV fwnkRw" kind="field" title="email">
+                        <span class="sc-ieecCq fMdASL"></span><span class="property-name">email</span>
+                        <div class="sc-nVkyK sc-hiwPVj eyZzuM eSyGZd">required</div>
+                      </td>
+                      <td class="sc-bkkeKt fOwWgB">
+                        <div>
+                          <div>
+                            <span class="sc-lbhJGD sc-iNGGcK gHbDui eLMLxg"></span
+                            ><span class="sc-lbhJGD sc-jeraig gHbDui ifsMbX">string</span>
+                          </div>
+                          <div><div class="sc-iJKOTD sc-cidDSM hGZPxu fhPxtY"></div></div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="">
+                      <td class="sc-hBUSln sc-fFeiMQ kCCtqV fwnkRw" kind="field" title="username">
+                        <span class="sc-ieecCq fMdASL"></span><span class="property-name">username</span>
+                        <div class="sc-nVkyK sc-hiwPVj eyZzuM eSyGZd">required</div>
+                      </td>
+                      <td class="sc-bkkeKt fOwWgB">
+                        <div>
+                          <div>
+                            <span class="sc-lbhJGD sc-iNGGcK gHbDui eLMLxg"></span
+                            ><span class="sc-lbhJGD sc-jeraig gHbDui ifsMbX">string</span>
+                          </div>
+                          <div><div class="sc-iJKOTD sc-cidDSM hGZPxu fhPxtY"></div></div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="last">
+                      <td class="sc-hBUSln sc-fFeiMQ kCCtqV fwnkRw" kind="field" title="password">
+                        <span class="sc-ieecCq fMdASL"></span><span class="property-name">password</span>
+                        <div class="sc-nVkyK sc-hiwPVj eyZzuM eSyGZd">required</div>
+                      </td>
+                      <td class="sc-bkkeKt fOwWgB">
+                        <div>
+                          <div>
+                            <span class="sc-lbhJGD sc-iNGGcK gHbDui eLMLxg"></span
+                            ><span class="sc-lbhJGD sc-jeraig gHbDui ifsMbX">string</span>
+                          </div>
+                          <div><div class="sc-iJKOTD sc-cidDSM hGZPxu fhPxtY"></div></div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div>
+                  <h3 class="sc-fIosxK bTvSgn">Responses</h3>
+                  <div>
+                    <button class="sc-htJRVC hoRAnv">
+                      <svg
+                        class="sc-egiyK bPEzCN"
+                        version="1.1"
+                        viewBox="0 0 24 24"
+                        x="0"
+                        xmlns="http://www.w3.org/2000/svg"
+                        y="0"
+                        aria-hidden="true"
+                      >
+                        <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon></svg
+                      ><strong class="sc-fXeWAj jHtNTU">default<!-- --> </strong><span class="sc-jcFjpl eahewB"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="sc-jRQBWg sc-gKclnd vSqXI dKDnzb">
+                <div class="sc-FNXRL jYAhkx">
+                  <button class="sc-eFegNN bxamQ">
+                    <span type="patch" class="sc-fmBCVi dhmOcT http-verb patch">patch</span
+                    ><span class="sc-jWUzzU hxZHzL">/user/email</span
+                    ><svg
+                      class="sc-egiyK laPRNF"
+                      style="margin-right: -25px"
+                      version="1.1"
+                      viewBox="0 0 24 24"
+                      x="0"
+                      xmlns="http://www.w3.org/2000/svg"
+                      y="0"
+                      aria-hidden="true"
+                    >
+                      <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+                    </svg>
+                  </button>
+                  <div aria-hidden="true" class="sc-lkgTHX fuqHqW">
+                    <div class="sc-jlRLRk fUpXCf">
+                      <div class="sc-iJKOTD sc-cidDSM hGZPxu fhPxtY"></div>
+                      <div tabindex="0" role="button">
+                        <div class="sc-dUbtfd ggmziU"><span></span>/user/email</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="sc-kDTinF hwMGJl"><!-- -->Request samples<!-- --></h3>
+                  <div class="sc-cxpSdN eCLDJY" data-rttabs="true">
+                    <ul class="react-tabs__tab-list" role="tablist">
+                      <li
+                        class="react-tabs__tab react-tabs__tab--selected"
+                        role="tab"
+                        id="react-tabs-32"
+                        aria-selected="true"
+                        aria-disabled="false"
+                        aria-controls="react-tabs-33"
+                        tabindex="0"
+                        data-rttab="true"
+                      >
+                        Payload
+                      </li>
+                    </ul>
+                    <div
+                      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                      role="tabpanel"
+                      id="react-tabs-33"
+                      aria-labelledby="react-tabs-32"
+                    >
+                      <div>
+                        <div class="sc-AjmGg bcpfGN">
+                          <span class="sc-cNKqjZ iYcnri">Content type</span>
+                          <div class="sc-bBHHxi eidhyg">application/json</div>
+                        </div>
+                        <div class="sc-jgrJph iUheaL">
+                          <div class="sc-jObWnj jOBPNj">
+                            <div class="sc-giYglK gjxyHD">
+                              <button><div class="sc-caiLqq ddxnzs">Copy</div></button>
+                            </div>
+                            <div class="sc-iJKOTD hGZPxu sc-dPiLbb sRoPx">
+                              <div class="redoc-json">
+                                <code
+                                  ><button class="collapser" aria-label="collapse"></button
+                                  ><span class="token punctuation">{</span><span class="ellipsis"></span>
+                                  <ul class="obj collapsible">
+                                    <li>
+                                      <div class="hoverable">
+                                        <span class="property token string">"email"</span>:
+                                        <span class="token string">&quot;string&quot;</span
+                                        ><span class="token punctuation">,</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="hoverable">
+                                        <span class="property token string">"username"</span>:
+                                        <span class="token string">&quot;string&quot;</span
+                                        ><span class="token punctuation">,</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="hoverable">
+                                        <span class="property token string">"password"</span>:
+                                        <span class="token string">&quot;string&quot;</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                  <span class="token punctuation">}</span></code
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="sc-kDTinF hwMGJl"><!-- -->Response samples<!-- --></h3>
+                  <div class="sc-cxpSdN eCLDJY" data-rttabs="true">
+                    <ul class="react-tabs__tab-list" role="tablist">
+                      <li
+                        class="tab-success react-tabs__tab--selected"
+                        role="tab"
+                        id="react-tabs-34"
+                        aria-selected="true"
+                        aria-disabled="false"
+                        aria-controls="react-tabs-35"
+                        tabindex="0"
+                        data-rttab="true"
+                      >
+                        default
+                      </li>
+                    </ul>
+                    <div
+                      class="react-tabs__tab-panel react-tabs__tab-panel--selected"
+                      role="tabpanel"
+                      id="react-tabs-35"
+                      aria-labelledby="react-tabs-34"
+                    >
+                      <div>
+                        <div class="sc-AjmGg bcpfGN">
+                          <span class="sc-cNKqjZ iYcnri">Content type</span>
+                          <div class="sc-bBHHxi eidhyg">application/json</div>
+                        </div>
+                        <div class="sc-jgrJph iUheaL">
+                          <div class="sc-jObWnj jOBPNj">
+                            <div class="sc-giYglK gjxyHD">
+                              <button><div class="sc-caiLqq ddxnzs">Copy</div></button>
+                            </div>
+                            <div class="sc-iJKOTD hGZPxu sc-dPiLbb sRoPx">
+                              <div class="redoc-json">
+                                <code
+                                  ><button class="collapser" aria-label="collapse"></button
+                                  ><span class="token punctuation">{</span><span class="ellipsis"></span>
+                                  <ul class="obj collapsible">
+                                    <li>
+                                      <div class="hoverable">
+                                        <span class="property token string">"id"</span>:
+                                        <span class="token string">&quot;string&quot;</span
+                                        ><span class="token punctuation">,</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="hoverable">
+                                        <span class="property token string">"email"</span>:
+                                        <span class="token string">&quot;string&quot;</span
+                                        ><span class="token punctuation">,</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="hoverable">
+                                        <span class="property token string">"username"</span>:
+                                        <span class="token string">&quot;string&quot;</span>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                  <span class="token punctuation">}</span></code
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
             id="tag/User/operation/UsersController_updateUsername"
             data-section-id="tag/User/operation/UsersController_updateUsername"
             class="sc-eCImPb hexvPn"
@@ -4480,6 +4786,21 @@
                 <div class="sc-iJKOTD sc-cidDSM hGZPxu fYaHea"></div>
                 <table class="sc-hGPBjI wbnF">
                   <tbody>
+                    <tr class="">
+                      <td class="sc-hBUSln sc-fFeiMQ kCCtqV fwnkRw" kind="field" title="email">
+                        <span class="sc-ieecCq fMdASL"></span><span class="property-name">email</span>
+                        <div class="sc-nVkyK sc-hiwPVj eyZzuM eSyGZd">required</div>
+                      </td>
+                      <td class="sc-bkkeKt fOwWgB">
+                        <div>
+                          <div>
+                            <span class="sc-lbhJGD sc-iNGGcK gHbDui eLMLxg"></span
+                            ><span class="sc-lbhJGD sc-jeraig gHbDui ifsMbX">string</span>
+                          </div>
+                          <div><div class="sc-iJKOTD sc-cidDSM hGZPxu fhPxtY"></div></div>
+                        </div>
+                      </td>
+                    </tr>
                     <tr class="">
                       <td class="sc-hBUSln sc-fFeiMQ kCCtqV fwnkRw" kind="field" title="username">
                         <span class="sc-ieecCq fMdASL"></span><span class="property-name">username</span>
@@ -4565,10 +4886,10 @@
                       <li
                         class="react-tabs__tab react-tabs__tab--selected"
                         role="tab"
-                        id="react-tabs-32"
+                        id="react-tabs-36"
                         aria-selected="true"
                         aria-disabled="false"
-                        aria-controls="react-tabs-33"
+                        aria-controls="react-tabs-37"
                         tabindex="0"
                         data-rttab="true"
                       >
@@ -4578,8 +4899,8 @@
                     <div
                       class="react-tabs__tab-panel react-tabs__tab-panel--selected"
                       role="tabpanel"
-                      id="react-tabs-33"
-                      aria-labelledby="react-tabs-32"
+                      id="react-tabs-37"
+                      aria-labelledby="react-tabs-36"
                     >
                       <div>
                         <div class="sc-AjmGg bcpfGN">
@@ -4597,6 +4918,13 @@
                                   ><button class="collapser" aria-label="collapse"></button
                                   ><span class="token punctuation">{</span><span class="ellipsis"></span>
                                   <ul class="obj collapsible">
+                                    <li>
+                                      <div class="hoverable">
+                                        <span class="property token string">"email"</span>:
+                                        <span class="token string">&quot;string&quot;</span
+                                        ><span class="token punctuation">,</span>
+                                      </div>
+                                    </li>
                                     <li>
                                       <div class="hoverable">
                                         <span class="property token string">"username"</span>:
@@ -4628,10 +4956,10 @@
                       <li
                         class="tab-success react-tabs__tab--selected"
                         role="tab"
-                        id="react-tabs-34"
+                        id="react-tabs-38"
                         aria-selected="true"
                         aria-disabled="false"
-                        aria-controls="react-tabs-35"
+                        aria-controls="react-tabs-39"
                         tabindex="0"
                         data-rttab="true"
                       >
@@ -4641,8 +4969,8 @@
                     <div
                       class="react-tabs__tab-panel react-tabs__tab-panel--selected"
                       role="tabpanel"
-                      id="react-tabs-35"
-                      aria-labelledby="react-tabs-34"
+                      id="react-tabs-39"
+                      aria-labelledby="react-tabs-38"
                     >
                       <div>
                         <div class="sc-AjmGg bcpfGN">
@@ -4663,6 +4991,13 @@
                                     <li>
                                       <div class="hoverable">
                                         <span class="property token string">"id"</span>:
+                                        <span class="token string">&quot;string&quot;</span
+                                        ><span class="token punctuation">,</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="hoverable">
+                                        <span class="property token string">"email"</span>:
                                         <span class="token string">&quot;string&quot;</span
                                         ><span class="token punctuation">,</span>
                                       </div>
@@ -4712,6 +5047,21 @@
                 <div class="sc-iJKOTD sc-cidDSM hGZPxu fYaHea"></div>
                 <table class="sc-hGPBjI wbnF">
                   <tbody>
+                    <tr class="">
+                      <td class="sc-hBUSln sc-fFeiMQ kCCtqV fwnkRw" kind="field" title="email">
+                        <span class="sc-ieecCq fMdASL"></span><span class="property-name">email</span>
+                        <div class="sc-nVkyK sc-hiwPVj eyZzuM eSyGZd">required</div>
+                      </td>
+                      <td class="sc-bkkeKt fOwWgB">
+                        <div>
+                          <div>
+                            <span class="sc-lbhJGD sc-iNGGcK gHbDui eLMLxg"></span
+                            ><span class="sc-lbhJGD sc-jeraig gHbDui ifsMbX">string</span>
+                          </div>
+                          <div><div class="sc-iJKOTD sc-cidDSM hGZPxu fhPxtY"></div></div>
+                        </div>
+                      </td>
+                    </tr>
                     <tr class="">
                       <td class="sc-hBUSln sc-fFeiMQ kCCtqV fwnkRw" kind="field" title="username">
                         <span class="sc-ieecCq fMdASL"></span><span class="property-name">username</span>
@@ -4797,10 +5147,10 @@
                       <li
                         class="react-tabs__tab react-tabs__tab--selected"
                         role="tab"
-                        id="react-tabs-36"
+                        id="react-tabs-40"
                         aria-selected="true"
                         aria-disabled="false"
-                        aria-controls="react-tabs-37"
+                        aria-controls="react-tabs-41"
                         tabindex="0"
                         data-rttab="true"
                       >
@@ -4810,8 +5160,8 @@
                     <div
                       class="react-tabs__tab-panel react-tabs__tab-panel--selected"
                       role="tabpanel"
-                      id="react-tabs-37"
-                      aria-labelledby="react-tabs-36"
+                      id="react-tabs-41"
+                      aria-labelledby="react-tabs-40"
                     >
                       <div>
                         <div class="sc-AjmGg bcpfGN">
@@ -4829,6 +5179,13 @@
                                   ><button class="collapser" aria-label="collapse"></button
                                   ><span class="token punctuation">{</span><span class="ellipsis"></span>
                                   <ul class="obj collapsible">
+                                    <li>
+                                      <div class="hoverable">
+                                        <span class="property token string">"email"</span>:
+                                        <span class="token string">&quot;string&quot;</span
+                                        ><span class="token punctuation">,</span>
+                                      </div>
+                                    </li>
                                     <li>
                                       <div class="hoverable">
                                         <span class="property token string">"username"</span>:
@@ -4860,10 +5217,10 @@
                       <li
                         class="tab-success react-tabs__tab--selected"
                         role="tab"
-                        id="react-tabs-38"
+                        id="react-tabs-42"
                         aria-selected="true"
                         aria-disabled="false"
-                        aria-controls="react-tabs-39"
+                        aria-controls="react-tabs-43"
                         tabindex="0"
                         data-rttab="true"
                       >
@@ -4873,8 +5230,8 @@
                     <div
                       class="react-tabs__tab-panel react-tabs__tab-panel--selected"
                       role="tabpanel"
-                      id="react-tabs-39"
-                      aria-labelledby="react-tabs-38"
+                      id="react-tabs-43"
+                      aria-labelledby="react-tabs-42"
                     >
                       <div>
                         <div class="sc-AjmGg bcpfGN">
@@ -4895,6 +5252,13 @@
                                     <li>
                                       <div class="hoverable">
                                         <span class="property token string">"id"</span>:
+                                        <span class="token string">&quot;string&quot;</span
+                                        ><span class="token punctuation">,</span>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <div class="hoverable">
+                                        <span class="property token string">"email"</span>:
                                         <span class="token string">&quot;string&quot;</span
                                         ><span class="token punctuation">,</span>
                                       </div>
@@ -5120,6 +5484,23 @@
                   tags: ['User'],
                 },
               },
+              '/user/email': {
+                patch: {
+                  operationId: 'UsersController_updateEmail',
+                  parameters: [],
+                  requestBody: {
+                    required: true,
+                    content: { 'application/json': { schema: { $ref: '#/components/schemas/UserRequestDto' } } },
+                  },
+                  responses: {
+                    default: {
+                      description: '',
+                      content: { 'application/json': { schema: { $ref: '#/components/schemas/UserResponseDto' } } },
+                    },
+                  },
+                  tags: ['User'],
+                },
+              },
               '/user/username': {
                 patch: {
                   operationId: 'UsersController_updateUsername',
@@ -5161,14 +5542,14 @@
               version: '1.0',
               contact: {},
             },
-            tags: [{ name: 'Nest.js', description: '' }],
+            tags: [],
             servers: [],
             components: {
               schemas: {
                 TokenRequestDto: {
                   type: 'object',
-                  properties: { username: { type: 'string' }, password: { type: 'string' } },
-                  required: ['username', 'password'],
+                  properties: { email: { type: 'string' }, username: { type: 'string' }, password: { type: 'string' } },
+                  required: ['email', 'username', 'password'],
                 },
                 TokenResponseDto: { type: 'object', properties: { token: { type: 'string' } }, required: ['token'] },
                 HealthResponseDto: { type: 'object', properties: { status: { type: 'string' } }, required: ['status'] },
@@ -5196,13 +5577,13 @@
                 },
                 UserResponseDto: {
                   type: 'object',
-                  properties: { id: { type: 'string' }, username: { type: 'string' } },
-                  required: ['id', 'username'],
+                  properties: { id: { type: 'string' }, email: { type: 'string' }, username: { type: 'string' } },
+                  required: ['id', 'email', 'username'],
                 },
                 UserRequestDto: {
                   type: 'object',
-                  properties: { username: { type: 'string' }, password: { type: 'string' } },
-                  required: ['username', 'password'],
+                  properties: { email: { type: 'string' }, username: { type: 'string' }, password: { type: 'string' } },
+                  required: ['email', 'username', 'password'],
                 },
               },
             },
@@ -5210,7 +5591,6 @@
         },
         searchIndex: {
           store: [
-            'tag/Nest.js',
             'tag/Auth',
             'tag/Auth/operation/AuthController_signUp',
             'tag/Auth/operation/AuthController_signIn',
@@ -5231,6 +5611,7 @@
             'tag/User',
             'tag/User/operation/UsersController_getUser',
             'tag/User/operation/UsersController_deleteUser',
+            'tag/User/operation/UsersController_updateEmail',
             'tag/User/operation/UsersController_updateUsername',
             'tag/User/operation/UsersController_updatePassword',
           ],
@@ -5241,78 +5622,79 @@
               ['title/0', [0, 2.773]],
               ['description/0', []],
               ['title/1', [1, 2.773]],
-              ['description/1', []],
-              ['title/2', [2, 2.773]],
-              ['description/2', [3, 2.423]],
-              ['title/3', [4, 2.773]],
-              ['description/3', [5, 2.423]],
-              ['title/4', [6, 2.262]],
-              ['description/4', []],
-              ['title/5', [7, 2.773]],
-              ['description/5', [6, 1.976]],
-              ['title/6', [8, 1.925]],
-              ['description/6', []],
-              ['title/7', [9, 2.262]],
-              ['description/7', [8, 1.682]],
-              ['title/8', [10, 2.773]],
-              ['description/8', [8, 1.682]],
-              ['title/9', [9, 2.262]],
-              ['description/9', [11, 1.682]],
+              ['description/1', [2, 2.49]],
+              ['title/2', [3, 2.773]],
+              ['description/2', [4, 2.49]],
+              ['title/3', [5, 2.262]],
+              ['description/3', []],
+              ['title/4', [6, 2.773]],
+              ['description/4', [5, 2.031]],
+              ['title/5', [7, 1.925]],
+              ['description/5', []],
+              ['title/6', [8, 2.262]],
+              ['description/6', [7, 1.729]],
+              ['title/7', [9, 2.773]],
+              ['description/7', [7, 1.729]],
+              ['title/8', [8, 2.262]],
+              ['description/8', [10, 1.729]],
+              ['title/9', [11, 2.773]],
+              ['description/9', [10, 1.729]],
               ['title/10', [12, 2.773]],
-              ['description/10', [11, 1.682]],
-              ['title/11', [13, 2.773]],
-              ['description/11', [11, 1.682]],
-              ['title/12', [14, 1.925]],
-              ['description/12', []],
-              ['title/13', [15, 2.262]],
-              ['description/13', [14, 1.682]],
-              ['title/14', [16, 2.773]],
-              ['description/14', [14, 1.682]],
-              ['title/15', [15, 2.262]],
-              ['description/15', [17, 1.682]],
+              ['description/10', [10, 1.729]],
+              ['title/11', [13, 1.925]],
+              ['description/11', []],
+              ['title/12', [14, 2.262]],
+              ['description/12', [13, 1.729]],
+              ['title/13', [15, 2.773]],
+              ['description/13', [13, 1.729]],
+              ['title/14', [14, 2.262]],
+              ['description/14', [16, 1.729]],
+              ['title/15', [17, 2.773]],
+              ['description/15', [16, 1.729]],
               ['title/16', [18, 2.773]],
-              ['description/16', [17, 1.682]],
-              ['title/17', [19, 2.773]],
-              ['description/17', [17, 1.682]],
-              ['title/18', [20, 1.925]],
-              ['description/18', []],
+              ['description/16', [16, 1.729]],
+              ['title/17', [19, 1.925]],
+              ['description/17', []],
+              ['title/18', [20, 2.773]],
+              ['description/18', [19, 1.729]],
               ['title/19', [21, 2.773]],
-              ['description/19', [20, 1.682]],
+              ['description/19', [19, 1.729]],
               ['title/20', [22, 2.773]],
-              ['description/20', [20, 1.682]],
-              ['title/21', [23, 2.773]],
-              ['description/21', [24, 2.423]],
-              ['title/22', [25, 2.773]],
-              ['description/22', [26, 2.423]],
+              ['description/20', [23, 2.49]],
+              ['title/21', [24, 2.773]],
+              ['description/21', [25, 2.49]],
+              ['title/22', [26, 2.773]],
+              ['description/22', [27, 2.49]],
             ],
             invertedIndex: [
-              ['auth', { _index: 1, title: { 1: {} }, description: {} }],
-              ['auth/sign-in', { _index: 5, title: {}, description: { 3: {} } }],
-              ['auth/sign-up', { _index: 3, title: {}, description: { 2: {} } }],
-              ['authcontroller_signin', { _index: 4, title: { 3: {} }, description: {} }],
-              ['authcontroller_signup', { _index: 2, title: { 2: {} }, description: {} }],
-              ['health', { _index: 6, title: { 4: {} }, description: { 5: {} } }],
-              ['healthcontroller_gethealth', { _index: 7, title: { 5: {} }, description: {} }],
-              ['list', { _index: 8, title: { 6: {} }, description: { 7: {}, 8: {} } }],
-              ['lists/{id', { _index: 11, title: {}, description: { 9: {}, 10: {}, 11: {} } }],
-              ['listscontroller_createlist', { _index: 10, title: { 8: {} }, description: {} }],
-              ['listscontroller_deletelist', { _index: 13, title: { 11: {} }, description: {} }],
-              ['listscontroller_getlist', { _index: 9, title: { 7: {}, 9: {} }, description: {} }],
-              ['listscontroller_updatelist', { _index: 12, title: { 10: {} }, description: {} }],
-              ['nest.j', { _index: 0, title: { 0: {} }, description: {} }],
-              ['task', { _index: 14, title: { 12: {} }, description: { 13: {}, 14: {} } }],
-              ['tasks/{id', { _index: 17, title: {}, description: { 15: {}, 16: {}, 17: {} } }],
-              ['taskscontroller_createtask', { _index: 16, title: { 14: {} }, description: {} }],
-              ['taskscontroller_deletetask', { _index: 19, title: { 17: {} }, description: {} }],
-              ['taskscontroller_gettask', { _index: 15, title: { 13: {}, 15: {} }, description: {} }],
-              ['taskscontroller_updatetask', { _index: 18, title: { 16: {} }, description: {} }],
-              ['user', { _index: 20, title: { 18: {} }, description: { 19: {}, 20: {} } }],
-              ['user/password', { _index: 26, title: {}, description: { 22: {} } }],
-              ['user/usernam', { _index: 24, title: {}, description: { 21: {} } }],
-              ['userscontroller_deleteus', { _index: 22, title: { 20: {} }, description: {} }],
-              ['userscontroller_getus', { _index: 21, title: { 19: {} }, description: {} }],
-              ['userscontroller_updatepassword', { _index: 25, title: { 22: {} }, description: {} }],
-              ['userscontroller_updateusernam', { _index: 23, title: { 21: {} }, description: {} }],
+              ['auth', { _index: 0, title: { 0: {} }, description: {} }],
+              ['auth/sign-in', { _index: 4, title: {}, description: { 2: {} } }],
+              ['auth/sign-up', { _index: 2, title: {}, description: { 1: {} } }],
+              ['authcontroller_signin', { _index: 3, title: { 2: {} }, description: {} }],
+              ['authcontroller_signup', { _index: 1, title: { 1: {} }, description: {} }],
+              ['health', { _index: 5, title: { 3: {} }, description: { 4: {} } }],
+              ['healthcontroller_gethealth', { _index: 6, title: { 4: {} }, description: {} }],
+              ['list', { _index: 7, title: { 5: {} }, description: { 6: {}, 7: {} } }],
+              ['lists/{id', { _index: 10, title: {}, description: { 8: {}, 9: {}, 10: {} } }],
+              ['listscontroller_createlist', { _index: 9, title: { 7: {} }, description: {} }],
+              ['listscontroller_deletelist', { _index: 12, title: { 10: {} }, description: {} }],
+              ['listscontroller_getlist', { _index: 8, title: { 6: {}, 8: {} }, description: {} }],
+              ['listscontroller_updatelist', { _index: 11, title: { 9: {} }, description: {} }],
+              ['task', { _index: 13, title: { 11: {} }, description: { 12: {}, 13: {} } }],
+              ['tasks/{id', { _index: 16, title: {}, description: { 14: {}, 15: {}, 16: {} } }],
+              ['taskscontroller_createtask', { _index: 15, title: { 13: {} }, description: {} }],
+              ['taskscontroller_deletetask', { _index: 18, title: { 16: {} }, description: {} }],
+              ['taskscontroller_gettask', { _index: 14, title: { 12: {}, 14: {} }, description: {} }],
+              ['taskscontroller_updatetask', { _index: 17, title: { 15: {} }, description: {} }],
+              ['user', { _index: 19, title: { 17: {} }, description: { 18: {}, 19: {} } }],
+              ['user/email', { _index: 23, title: {}, description: { 20: {} } }],
+              ['user/password', { _index: 27, title: {}, description: { 22: {} } }],
+              ['user/usernam', { _index: 25, title: {}, description: { 21: {} } }],
+              ['userscontroller_deleteus', { _index: 21, title: { 19: {} }, description: {} }],
+              ['userscontroller_getus', { _index: 20, title: { 18: {} }, description: {} }],
+              ['userscontroller_updateemail', { _index: 22, title: { 20: {} }, description: {} }],
+              ['userscontroller_updatepassword', { _index: 26, title: { 22: {} }, description: {} }],
+              ['userscontroller_updateusernam', { _index: 24, title: { 21: {} }, description: {} }],
             ],
             pipeline: [],
           },
