@@ -1,13 +1,16 @@
 import { Controller, Get } from '@nestjs/common';
+import { ApiResponse, ApiTags } from '@nestjs/swagger';
+import { HealthResponseDto } from './health.dto';
 import { HealthService } from './health.service';
-import { HealthResponse } from './health.types';
 
-@Controller()
+@ApiTags('Health')
+@Controller('health')
 export class HealthController {
   constructor(private readonly healthService: HealthService) {}
 
-  @Get('/health')
-  getHealth(): HealthResponse {
+  @Get()
+  @ApiResponse({ type: HealthResponseDto })
+  getHealth(): HealthResponseDto {
     return this.healthService.getHealth();
   }
 }

@@ -1,16 +1,16 @@
 version: '3.9'
 
 volumes:
-  postgres_nest:
+  postgres_nest_api:
     driver: local
 
 services:
-  postgres-nest:
+  postgres-nest-api:
     restart: unless-stopped
     image: postgres:15.3
-    container_name: postgres-nest
+    container_name: postgres-nest-api
     volumes:
-      - postgres_nest:/var/lib/postgresql/data
+      - postgres_nest_api:/var/lib/postgresql/nest
     ports:
       - '5432:5432'
     environment:

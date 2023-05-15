@@ -18,5 +18,5 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
   },
-  "include": ["src", "jest.config.ts", "test"]
+  "include": ["src", "test", "jest.config.ts"]
 }
